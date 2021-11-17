@@ -1,13 +1,17 @@
+import 'dotenv/config';
 import express from 'express';
 
-const server = express();
+import { UrlController } from './controllers/UrlController';
 
 const port = process.env.PORT || 3333;
 
+const server = express();
+
+const urlController = new UrlController();
+
 server.use(express.json());
 
-server.get('/', (req, res) => {
-  return res.json({ hello: 'World' });
-});
+server.post('/shortener', urlController.shortener);
+server.get('/:hash', urlController.redirect);
 
 server.listen(port, () => console.log('💻 Server is up on port...', port));
