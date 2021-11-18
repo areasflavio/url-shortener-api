@@ -1,5 +1,7 @@
-import { Request, Response } from 'express';
+import { Request, Response, urlencoded } from 'express';
 import shortId from 'shortid';
+
+import { URLModel } from '../database/model/URL';
 
 class UrlController {
   constructor() {}
@@ -7,22 +9,31 @@ class UrlController {
   public async shortener(req: Request, res: Response): Promise<void> {
     const { originURL } = req.body;
 
+    const url = await URLModel.findOne({ originURL });
+
+    if (url) {
+      res.json(url);
+      return;
+    }
+
     const hash = shortId.generate();
     const shortURL = `${process.env.API_URL}/${hash}`;
 
-    res.json({ originURL, hash, shortURL });
+    const newUrl = await URLModel.create({ originURL, hash, shortURL });
+
+    res.json(newUrl);
   }
 
   public async redirect(req: Request, res: Response): Promise<void> {
     const { hash } = req.params;
 
-    const url = {
-      originURL: 'https://www.npmjs.com/package/dotenv',
-      hash: 'oNkuCVH2t',
-      shortURL: 'http://localhost:3333/oNkuCVH2t',
-    };
+    const url = await URLModel.findOne({ hash });
 
-    res.redirect(url.originURL);
+    if (url) {
+      res.redirect(url.originURL);
+    }
+
+    res.status(400).json({ error: 'URL not found.' });
   }
 }
 
