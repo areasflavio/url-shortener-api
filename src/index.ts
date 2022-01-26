@@ -14,6 +14,7 @@ database.connect();
 
 const urlController = new UrlController();
 server.post('/shortener', urlController.shortener);
+server.put('/update', urlController.updateURL);
 server.get('/latestURLs', urlController.latestURLs);
 server.get('/:hash', urlController.redirect);
 

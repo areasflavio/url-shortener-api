@@ -30,13 +30,37 @@ class UrlController {
     res.json(newUrl);
   }
 
+  public async updateURL(req: Request, res: Response): Promise<void> {
+    const { originURL, shortURL } = req.body;
+
+    const url = await URLModel.findOneAndUpdate(
+      { shortURL },
+      { originURL, createdAt: new Date() }
+    );
+
+    if (!url) {
+      res.status(400).json({ error: 'URL not found.' });
+      return;
+    }
+
+    res.json({
+      hash: url.hash,
+      originURL,
+      shortURL,
+      createdAt: new Date(),
+      _id: url._id,
+      __v: url.__v,
+    });
+  }
+
   public async redirect(req: Request, res: Response): Promise<void> {
     const { hash } = req.params;
 
     const url = await URLModel.findOne({ hash });
 
     if (url) {
-      return res.redirect(url.originURL);
+      res.redirect(url.originURL);
+      return;
     }
 
     res.status(400).json({ error: 'URL not found.' });
@@ -50,6 +74,7 @@ class UrlController {
 
     if (!urls) {
       res.status(400).json({ error: 'There are no URLs.' });
+      return;
     }
 
     res.json(urls);
