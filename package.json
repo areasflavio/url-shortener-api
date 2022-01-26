@@ -1,12 +1,12 @@
 {
   "name": "url-shortener",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.ts",
   "license": "MIT",
   "scripts": {
     "build:watch": "tsc -w",
     "build": "tsc",
-    "dev:server": "nodemon dist"
+    "dev:server": "nodemon src/index.ts"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
@@ -15,6 +15,7 @@
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
     "typescript": "^4.5.2"
   },
   "dependencies": {

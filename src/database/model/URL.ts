@@ -9,6 +9,9 @@ export class URL {
 
   @prop({ required: true })
   shortURL: string;
+
+  @prop({ required: true })
+  createdAt: Date;
 }
 
 const URLModel = getModelForClass(URL);

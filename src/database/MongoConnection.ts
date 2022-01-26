@@ -12,7 +12,7 @@ class MongoConnection {
         // useUnifiedTopology: true,
       });
 
-      console.log('Database connected');
+      console.log('🎲 Database connected');
     } catch (err: any) {
       console.error(err.message);
       process.exit(1);

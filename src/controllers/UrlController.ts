@@ -18,8 +18,14 @@ class UrlController {
 
     const hash = shortId.generate();
     const shortURL = `${process.env.API_URL}/${hash}`;
+    const createdAt = new Date();
 
-    const newUrl = await URLModel.create({ originURL, hash, shortURL });
+    const newUrl = await URLModel.create({
+      originURL,
+      hash,
+      shortURL,
+      createdAt,
+    });
 
     res.json(newUrl);
   }
@@ -30,10 +36,23 @@ class UrlController {
     const url = await URLModel.findOne({ hash });
 
     if (url) {
-      res.redirect(url.originURL);
+      return res.redirect(url.originURL);
     }
 
     res.status(400).json({ error: 'URL not found.' });
+  }
+
+  public async latestURLs(req: Request, res: Response): Promise<void> {
+    const urls = await URLModel.find({}, null, {
+      limit: 5,
+      sort: { createdAt: -1 },
+    });
+
+    if (!urls) {
+      res.status(400).json({ error: 'There are no URLs.' });
+    }
+
+    res.json(urls);
   }
 }
 

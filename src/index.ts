@@ -14,6 +14,7 @@ database.connect();
 
 const urlController = new UrlController();
 server.post('/shortener', urlController.shortener);
+server.get('/latestURLs', urlController.latestURLs);
 server.get('/:hash', urlController.redirect);
 
 server.listen(port, () => console.log('💻 Server is up on port...', port));
