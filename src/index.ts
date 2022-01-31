@@ -1,5 +1,6 @@
 import 'dotenv/config';
 import express from 'express';
+import cors from 'cors';
 
 import { MongoConnection } from './database/MongoConnection';
 import { UrlController } from './controllers/UrlController';
@@ -7,6 +8,7 @@ import { UrlController } from './controllers/UrlController';
 const port = process.env.PORT || 3333;
 
 const server = express();
+server.use(cors());
 server.use(express.json());
 
 const database = new MongoConnection();
