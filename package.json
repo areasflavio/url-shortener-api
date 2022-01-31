@@ -6,7 +6,7 @@
   "scripts": {
     "build:watch": "tsc -w",
     "build": "tsc",
-    "start": "tsc",
+    "start": "node dist/server.js",
     "dev:server": "nodemon src/index.ts"
   },
   "devDependencies": {
