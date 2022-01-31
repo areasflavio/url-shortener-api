@@ -14,6 +14,10 @@ server.use(express.json());
 const database = new MongoConnection();
 database.connect();
 
+server.get('/', (req, res) => {
+  return res.json({ message: 'This is URLshortener APP' });
+});
+
 const urlController = new UrlController();
 server.post('/shortener', urlController.shortener);
 server.put('/update', urlController.updateURL);
