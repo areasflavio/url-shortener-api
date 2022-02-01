@@ -9,22 +9,14 @@
 </h2>
 
 <p align="center">
-  Checkout the <a href="https://areasflavio-url-shortener.herokuapp.com">API Live version</a>
-   hosted on:
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/areasflavio/url-shortener.svg">
+  
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/areasflavio/url-shortener.svg">
+  
+  <a href="https://github.com/areasflavio/url-shortener/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/areasflavio/url-shortener.svg">
+  </a>
 </p>
-<p align="center">
-    <img alt="Heroku" src="https://img.shields.io/badge/heroku-%23430098.svg?&style=for-the-badge&logo=heroku&logoColor=white"/>
-</p>
-
-<p align="center">
-  You also can check the complete <a href="https://areasflavio-url-shortener.herokuapp.com">Application Live version</a>
-  hosted on:
-</p>
-<p align="center">
-    <img alt="Vercel" src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"/>
-</p>
-
-<br/>
 
 <p align="center">
   <a href="#computer-API-Reference">API Reference</a>&nbsp;&nbsp;|&nbsp;&nbsp;
@@ -33,13 +25,19 @@
 </p>
 
 <p align="center">
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/areasflavio/url-shortener.svg">
-  
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/areasflavio/url-shortener.svg">
-  
-  <a href="https://github.com/areasflavio/url-shortener/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/areasflavio/url-shortener.svg">
-  </a>
+  Checkout the <a href="https://areasflavio-url-shortener.herokuapp.com">API Live version</a>
+   hosted on:
+</p>
+<p align="center">
+    <img alt="Heroku" src="https://img.shields.io/badge/heroku-%23430098.svg?&style=for-the-badge&logo=heroku&logoColor=white"/>
+</p>
+
+<p align="center">
+  You also can check the complete <a href="https://url-shortener-web-liard.vercel.app">Application Live version</a>
+  hosted on:
+</p>
+<p align="center">
+    <img alt="Vercel" src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"/>
 </p>
 
 # :computer: API-Reference
