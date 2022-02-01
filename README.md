@@ -8,8 +8,6 @@
   A url shortener API  build with Node.JS, Express, MongoDB and Typescript.
 </h2>
 
-<br/>
-
 <p align="center">
   Checkout the <a href="https://areasflavio-url-shortener.herokuapp.com">API Live version</a>
    hosted on:
@@ -23,7 +21,7 @@
   hosted on:
 </p>
 <p align="center">
-    <img alt="Vercel" src="https://img.shields.io/badge/Vercel-100000?style=for-the-badge&logo=vercel&logoColor=white"/>
+    <img alt="Vercel" src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"/>
 </p>
 
 <br/>
@@ -31,7 +29,7 @@
 <p align="center">
   <a href="#computer-API-Reference">API Reference</a>&nbsp;&nbsp;|&nbsp;&nbsp;
   <a href="#keyboard-technologies">Technologies</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="#computer_mouse-installation">Installation</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#computer_mouse-installation">Installation</a>
 </p>
 
 <p align="center">
