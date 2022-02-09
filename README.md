@@ -9,12 +9,12 @@
 </h2>
 
 <p align="center">
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/areasflavio/url-shortener.svg">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/areasflavio/url-shortener-api.svg">
   
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/areasflavio/url-shortener.svg">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/areasflavio/url-shortener-api.svg">
   
   <a href="https://github.com/areasflavio/url-shortener/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/areasflavio/url-shortener.svg">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/areasflavio/url-shortener-api.svg">
   </a>
 </p>
 
